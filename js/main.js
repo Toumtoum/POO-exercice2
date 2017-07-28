@@ -9,7 +9,7 @@ function warrior (name,attack,defense,health){
 
       warriorX.health -= this.attack;
       alert(this.name+" attack "+warriorX.name);
-      alert(warriorX.name+" santé restante "+warriorX.health);
+      alert(warriorX.name+" health left "+warriorX.health);
 
   };
 }
@@ -31,7 +31,7 @@ function magician (name,attack,defense,health,mana){
 
   this.treatement = function (){
 
-    if (this.mana > 10){
+    if (this.mana >= 10){
       this.mana -= 10;
       this.health +=10;
       alert(this.name+" trying to heal his wound");
@@ -46,7 +46,7 @@ function magician (name,attack,defense,health,mana){
 
 var bob = new warrior ("bob",10,10,100);
 var patrick = new warrior ("patrick",20,20,100);
-var captainCrab = new magician ("Captain Crab",25,30,150,70);
+var captainCrab = new magician ("Captain Crab",25,30,150,10);
 
 
 patrick.combat(captainCrab);
